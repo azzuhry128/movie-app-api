@@ -13,7 +13,7 @@ const {
 } = require("../validation/index");
 
 router.get("/", (req, res) => {
-  res.send("this route serves only GET, dont bother sending request to me");
+  res.json("this route serves only GET, dont bother sending request to me");
 });
 
 router.post(
