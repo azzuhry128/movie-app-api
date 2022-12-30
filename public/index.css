@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#label {
+  margin-top: 16px;
+}
+
+#input {
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 4px;
+}
+
+#submitButton {
+  margin-top: 8px;
+  height: 2rem;
+}
+
+#registerForm {
+  padding: 4px;
+  margin: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: max-content;
+}
