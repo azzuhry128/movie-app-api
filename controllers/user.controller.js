@@ -1,4 +1,6 @@
 const User = require("../models/user.model");
+const Rating = require("../models/rating.model");
+const Comment = require("../models/comment.model");
 const hasher = require("bcryptjs");
 
 exports.DaftarUser = async (req, res) => {
@@ -77,5 +79,24 @@ exports.LoginUser = async (req, res) => {
 
 exports.RatingUser = async (req, res) => {
   const { username, rating } = req.query;
-  res.send({ status: 200, username: username, rating: rating });
+
+  const ratingUser = new Rating({
+    username: username,
+    rating: rating,
+  });
+
+  ratingUser.save();
+  res.send({ status: 200, data: ratingUser });
+};
+
+exports.CommentUser = async (req, res) => {
+  const { username, comment } = req.query;
+
+  const commentUser = new Comment({
+    username: username,
+    comment: comment,
+  });
+
+  commentUser.save();
+  res.send({ status: 200, username: username, comment: comment });
 };
