@@ -21,7 +21,7 @@ mongoose
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/", userRouter);
+app.use("https://movie-app-api-dun.vercel.app/", userRouter);
 
 // app.use("/registration", (req, res, next) => {
 //   if (req.method === "POST") {

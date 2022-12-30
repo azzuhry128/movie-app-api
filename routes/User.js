@@ -12,8 +12,8 @@ const {
   validationLogin,
 } = require("../validation/index");
 
-router.post("/registration", validationDaftar, runValidation, DaftarUser);
-router.post("/login", validationLogin, runValidation, LoginUser);
-router.post("/rating", runValidation, RatingUser);
-router.post("/comment", runValidation, CommentUser);
+router.post("https://movie-app-api-dun.vercel.app/registration", validationDaftar, runValidation, DaftarUser);
+router.post("https://movie-app-api-dun.vercel.app/login", validationLogin, runValidation, LoginUser);
+router.post("https://movie-app-api-dun.vercel.app/rating", runValidation, RatingUser);
+router.post("https://movie-app-api-dun.vercel.app/comment", runValidation, CommentUser);
 module.exports = router;
