@@ -12,7 +12,7 @@ const {
   validationLogin,
 } = require("../validation/index");
 
-router.get("https://movie-app-e2xc2xl6m-azzuhry128.vercel.app/", (req, res) => {
+router.get("/", (req, res) => {
   res.send("this route serves only GET, dont bother sending request to me");
 });
 
