@@ -12,8 +12,30 @@ const {
   validationLogin,
 } = require("../validation/index");
 
-router.post("https://movie-app-api-dun.vercel.app/registration", validationDaftar, runValidation, DaftarUser);
-router.post("https://movie-app-api-dun.vercel.app/login", validationLogin, runValidation, LoginUser);
-router.post("https://movie-app-api-dun.vercel.app/rating", runValidation, RatingUser);
-router.post("https://movie-app-api-dun.vercel.app/comment", runValidation, CommentUser);
+router.get("https://movie-app-api-dun.vercel.app/", (req, res) => {
+  res.send("this route serves only GET, dont bother sending request to me");
+});
+
+router.post(
+  "https://movie-app-api-dun.vercel.app/registration",
+  validationDaftar,
+  runValidation,
+  DaftarUser
+);
+router.post(
+  "https://movie-app-api-dun.vercel.app/login",
+  validationLogin,
+  runValidation,
+  LoginUser
+);
+router.post(
+  "https://movie-app-api-dun.vercel.app/rating",
+  runValidation,
+  RatingUser
+);
+router.post(
+  "https://movie-app-api-dun.vercel.app/comment",
+  runValidation,
+  CommentUser
+);
 module.exports = router;
