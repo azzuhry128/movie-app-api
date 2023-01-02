@@ -5,6 +5,8 @@ const {
   LoginUser,
   RatingUser,
   CommentUser,
+  getComment,
+  getRatings
 } = require("../controllers/user.controller");
 const {
   runValidation,
@@ -24,13 +26,9 @@ router.get("/login", (req,res) => {
   res.json("this is login endPoint")
 })
 
-router.get("/comment", (req,res) => {
-  res.json("this is comment endPoint")
-})
+router.get("/comment", getComment)
 
-router.get("/rating", (req,res) => {
-  res.json("this is comment endPoint")
-})
+router.get("/rating", getRatings)
 
 router.post(
   "/registration",

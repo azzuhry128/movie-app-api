@@ -100,3 +100,13 @@ exports.CommentUser = async (req, res) => {
   commentUser.save();
   res.send({ status: 200, username: username, comment: comment });
 };
+
+exports.getComment = async(req,res) => {
+  const allComments = await Comment.find({})
+  res.send(allComments)
+}
+
+exports.getRatings = async(req,res) => {
+  const allRatings = await Rating.find({})
+  res.send(allRatings)
+}
