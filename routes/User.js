@@ -16,25 +16,41 @@ router.get("/", (req, res) => {
   res.json("this route serves only GET, dont bother sending request to me");
 });
 
+router.get("/registration", (req,res) => {
+  res.json("this is registration endPoint")
+})
+
+router.get("/login", (req,res) => {
+  res.json("this is login endPoint")
+})
+
+router.get("/comment", (req,res) => {
+  res.json("this is comment endPoint")
+})
+
+router.get("/rating", (req,res) => {
+  res.json("this is comment endPoint")
+})
+
 router.post(
-  "https://movie-app-api-dun.vercel.app/registration",
+  "/registration",
   validationDaftar,
   runValidation,
   DaftarUser
 );
 router.post(
-  "https://movie-app-api-dun.vercel.app/login",
+  "/login",
   validationLogin,
   runValidation,
   LoginUser
 );
 router.post(
-  "https://movie-app-api-dun.vercel.app/rating",
+  "/rating",
   runValidation,
   RatingUser
 );
 router.post(
-  "https://movie-app-api-dun.vercel.app/comment",
+  "/comment",
   runValidation,
   CommentUser
 );
